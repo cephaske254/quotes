@@ -1,0 +1,24 @@
+<div class="container-fluid">
+    <div class="row">
+        <div *ngFor="let quote of quotes;let i=index;" class="col-sm-6 col-md-4 my-2">
+            <div class="card">
+                <div class="card-header h3">
+                    {{quote.author}}
+                </div>
+                <div class="card-body h4 font-italic p-1">
+                    <span class="fas fa-quote-left w-100"></span>
+                    <p class="">{{quote.content}}</p>
+                    <span class="fas fa-quote-right w-100 text-right"></span>
+                </div>
+                <div class="card-footer text-center py-0 small font-italic">
+                    <button class="btn btn-sm btn-outline-success m-1 fas fa-thumbs-up"></button><span>12</span>
+                    <button class="btn btn-sm btn-outline-danger m-1 fas fa-thumbs-down">
+                    </button><span>12</span>
+                    <span> <br> {{quote.date|date}} days ago</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-quote-form></app-quote-form>

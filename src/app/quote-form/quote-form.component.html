@@ -1,0 +1,22 @@
+<div class="container my-3 bg-light p-3 border border-secondary rounded position">
+    <div class="row justify-content-center">
+        <form #projectForm="ngForm" action="#" class="card p-2 form-horizontal">
+            <h4>Add A Quote</h4>
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" class="form-control" [(ngModel)]="newQuote.author" name="name" placeholder="Enter Your Name">
+                <p>{{newQuote.author}}</p>
+            </div>
+            <div class="form-group">
+                <label for="content">Your Quote</label>
+                <textarea [(ngModel)]="newQuote.content" name="" id="" cols="30" rows="4" class="form-control" placeholder="Type your quote here..." name="content"></textarea>
+                <p>{{newQuote.content}}</p>
+            </div>
+            <div class="form-group">
+                <label for="">Date</label>
+                <input type="date" class="form-control" [(ngModel)]="newQuote.date" name="date">
+                {{newQuote.date}}
+            </div>
+        </form>
+    </div>
+</div>
