@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule,EventEmitter } from '@angular/core';
 import $ from "jquery";
 
 import { AppRoutingModule } from './app-routing.module';
