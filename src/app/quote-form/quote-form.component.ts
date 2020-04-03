@@ -8,7 +8,7 @@ import  $ from 'jquery';
   styleUrls: ['./quote-form.component.css']
 })
 export class QuoteFormComponent implements OnInit {
-  newQuote = new Quote(0,"","",new Date());
+  newQuote = new Quote(0,"","",new Date(),0,0,"no","no");
   @Output () newQuoteOutput = new EventEmitter<Quote>();
 
   addQuote(){
@@ -20,5 +20,7 @@ export class QuoteFormComponent implements OnInit {
 
 }
 $(document).ready(function(){
-alert()
+  $(".addQuotebtn").click(function(){
+    $(".addquotecont").slideToggle();
+  })
 });

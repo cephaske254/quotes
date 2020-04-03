@@ -1,9 +1,19 @@
+<nav class="navbar-light bg-light">
+    <ul class="nav justify-content center">
+        <li class="nav-item">
+            <a href="#" class="nav-link m-1">Home</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link m-1 btn btn-sm btn-success addQuotebtn">Add Quote <li class="fas fa-plus"></li></a>
+        </li>
+    </ul>
+</nav>
 <div class="container-fluid">
     <div class="row">
         <div *ngFor="let quote of quotes;let i=index;" class="col-sm-6 col-md-4 my-2">
             <div class="card">
                 <div class="card-header h3">
-                    {{quote.author}}
+                    {{quote.author}} <span class="btn float-right text-danger fas fa-trash" (click)="deleteQuote(true,i)"></span>
                 </div>
                 <div class="card-body h4 font-italic p-1">
                     <span class="fas fa-quote-left w-100"></span>
@@ -11,9 +21,9 @@
                     <span class="fas fa-quote-right w-100 text-right"></span>
                 </div>
                 <div class="card-footer text-center py-0 small font-italic">
-                    <button class="btn btn-sm btn-outline-success m-1 fas fa-thumbs-up"></button><span>12</span>
-                    <button class="btn btn-sm btn-outline-danger m-1 fas fa-thumbs-down">
-                    </button><span>12</span>
+                    <button (click)="like(i)" class="btn btn-sm btn-outline-success m-1 fas fa-thumbs-up"></button><span>{{quote.likes}}</span>
+                    <button class="btn btn-sm btn-outline-danger m-1 fas fa-thumbs-down" (click)="dislike(i)">
+                    </button><span>{{quote.dislikes}}</span>
                     <span> <br> {{quote.date|date}} days ago</span>
                 </div>
             </div>
