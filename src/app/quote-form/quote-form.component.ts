@@ -22,5 +22,5 @@ export class QuoteFormComponent implements OnInit {
 $(document).ready(function(){
   $(".addQuotebtn").click(function(){
     $(".addquotecont").slideToggle();
-  })
+  });
 });

@@ -1,0 +1,6 @@
+.row div div.card {
+    height: 99%;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}

@@ -1,4 +1,4 @@
-<nav class="navbar-light bg-light">
+<nav class="navbar-light bg-light sticky-top">
     <ul class="nav justify-content center">
         <li class="nav-item">
             <a href="#" class="nav-link m-1">Home</a>
@@ -10,8 +10,8 @@
 </nav>
 <div class="container-fluid">
     <div class="row">
-        <div *ngFor="let quote of quotes;let i=index;" class="col-sm-6 col-md-4 my-2">
-            <div class="card">
+        <div *ngFor="let quote of quotes;let i=index;" class="col-sm-6 col-md-4 my-2 slider">
+            <div class="card h-100">
                 <div class="card-header h3">
                     {{quote.author}} <span class="btn float-right text-danger fas fa-trash" (click)="deleteQuote(true,i)"></span>
                 </div>
@@ -24,7 +24,7 @@
                     <button (click)="like(i)" class="btn btn-sm btn-outline-success m-1 fas fa-thumbs-up"></button><span>{{quote.likes}}</span>
                     <button class="btn btn-sm btn-outline-danger m-1 fas fa-thumbs-down" (click)="dislike(i)">
                     </button><span>{{quote.dislikes}}</span>
-                    <span> <br> {{quote.date|date}} days ago</span>
+                    <span> <br> {{quote.date|datecount}}</span>
                 </div>
             </div>
         </div>

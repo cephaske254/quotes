@@ -9,9 +9,11 @@ import { Quote } from '../quote';
 export class QuoteComponent implements OnInit {
 
   quotes: Quote[] = [
-    new Quote(1, "Ken Maina", "Quote Here 1", new Date(2019, 4, 4), 3, 4, "no", "no"),
-    new Quote(2, "Ken Maina", "Quote Here 2", new Date(2016, 5, 1), 6, 2, "no", "no"),
-    new Quote(3, "Ken Maina", "Quote Here 3", new Date(2016, 5, 1), 8, 12, "no", "no"),
+    new Quote(1, "Ken M.", "Machines are worshipped because they are beautiful and valued because they confer power; they are hated because they are hideous and loathed because they impose slavery", new Date(2019, 4, 4), 3, 4, "no", "no"),
+    new Quote(2, "Raphael K.", "Technology is just a tool. In terms of getting the kids working together and motivating them, the teacher is the most important.", new Date(2016, 5, 1), 6, 2, "no", "no"),
+    new Quote(3, "Faith T.", "You never change things by fighting the existing reality. To change something, build a new model that makes the existing model obsolete.",new Date(2019,4,5),4,2,"no","no"),
+    new Quote(4, "Abdulfatah M.", "We are stuck with technology when what we really want is just stuff that works",new Date(2019,4,5),4,2,"no","no"),
+    new Quote(5, "Meshack M.", "Most of the time spent wrestling with technologies that don't quite work yet is just not worth it for end users, however much fun it is for nerds",new Date(2019,4,5),4,2,"no","no"),
   ]
   constructor() { }
   addNewQuote(quote) {
