@@ -19,11 +19,15 @@ export class QuoteComponent implements OnInit {
   addNewQuote(quote) {
     let id = this.quotes.length + 1;
     quote.id = id;
-    this.quotes.push(quote);
+    setTimeout(()=>{
+      this.quotes.unshift(quote);
+    },1000)
   }
   deleteQuote(del: boolean, index: any) {
     if (confirm("Sure to delete?")) {
-      this.quotes.splice(index, 1);
+      setTimeout(()=>{
+        this.quotes.splice(index, 1);
+      },400)
     }
   }
 

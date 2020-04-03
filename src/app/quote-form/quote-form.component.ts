@@ -23,4 +23,11 @@ $(document).ready(function(){
   $(".addQuotebtn").click(function(){
     $(".addquotecont").slideToggle();
   });
+  var maxDate= new Date().toISOString().split("T")[0];
+  $("form").submit(function(){
+    setTimeout(() => {
+      $(this).parent().parent().slideUp();
+    }, 300);
+  })
+  
 });

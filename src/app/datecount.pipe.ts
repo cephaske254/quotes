@@ -13,7 +13,7 @@ export class DatecountPipe implements PipeTransform {
     //day difference->milliseconds...*0.001->seconds
     let dayDifference:any = Math.abs(todayShort - value)*0.001;
     let daysGone:number = dayDifference/daySeconds;
-    if(daysGone <=0){
+    if(daysGone <=1 && daysGone>=0){
       return "today";
     }else{
       return daysGone+ " days ago";
